@@ -25,12 +25,12 @@ void setup() {
 void loop() {
   currKeyState = digitalRead(PIN_KEYSW);
 
-  // キースイッチが押された
+  // The key switch was pressed
   if ((prevKeyState == HIGH) && (currKeyState == LOW)) {
     mouseOn = !mouseOn;
   }
 
-  // マウスカーソルを動かす
+  // Move the mouse cursor
   if (mouseOn) {
     if (mouseMoveCnt == 0) {
       Mouse.move(10, 0);
